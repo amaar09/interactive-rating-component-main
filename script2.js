@@ -4,11 +4,12 @@ const submit = document.getElementById("submit");
 
 let a;
 submit.addEventListener("click", () => {
-    let hideOnSubmit = document.getElementById("hideOnSubmit");
-    hideOnSubmit.classList.add("hide")
+    if (a) {
+        let hideOnSubmit = document.getElementById("hideOnSubmit");
+        hideOnSubmit.classList.add("hide")
 
-    let showMsg = document.getElementById("show");
-    let html = `
+        let showMsg = document.getElementById("show");
+        let html = `
     <div class="inside-show thank-container">
     <img class="thank-you-image" src="./images/illustration-thank-you.svg" alt="" />
    <p class="round-border">You selected ${a} out of 5</p>
@@ -18,15 +19,16 @@ submit.addEventListener("click", () => {
      more support, don’t hesitate to get in touch!
    </p>
    </div>`
-    showMsg.innerHTML = html;
+        showMsg.innerHTML = html;
 
-    setTimeout(() => {
-        console.log("4 seconds time interval")
-        hideOnSubmit.classList.remove("hide")
-        // hideOnSubmit.classList.add("visible")
-
-    }, 1500);
-
+        //the below setTimeOut is for returning back to the rating card 
+        // setTimeout(() => {
+        //     console.log("4 seconds time interval")
+        //     hideOnSubmit.classList.remove("hide")
+        //     showMsg.innerHTML = "";
+        //     a = ""
+        // }, 4000);
+    }
 })
 
 

@@ -29,10 +29,12 @@ body{
         height: 100vh;
         justify-content: center;
         align-items: center;  
+        /* border: 2px solid red; */
 }
 main{
+    /* border: 2px solid red; */
     background: var(--Dark-Blue);
-    width: 385px;
+    max-width: 385px;
     border-radius: 25px;
     padding: 35px;
 
@@ -108,7 +110,7 @@ button:focus{
     display: none;
 }
 .visible{
-    display: flex;
+    display: visible;
 }
 #show{
     display: flex;
